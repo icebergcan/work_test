@@ -131,6 +131,7 @@ section {
 .alphabet {
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
 }
 
 .alphabet > * {
@@ -153,8 +154,9 @@ section {
 }
  
 .list {
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .listSection {
@@ -166,22 +168,28 @@ section {
 }
 
 .listSection:hover {
-    padding: 5px;
+    /* padding-left: -5px; */
+    /* padding: 4px 5px 5px -10px; */
     background: #c4c4c4;
     border-radius: 3px;
     overflow: visible;
+    position: relative;
+    display: flex;
 
 }
 
 .listSection:hover::before {
-    position: relative;
-    overflow: visible;
-    left: 101%;
-    display: block;
     content: '';
-    width: 5px;
-    height: 5px;
-    background-color: #E6332A;
+    justify-self: end;
+    height: 2px;
+    width: 6px;
+    background-color: #ffffff;
+    border: #E6332A solid;
+    border-width: 4px 2px 4px 2px;
+    border-radius: 10px;
+    position: absolute;
+    right: -3px;
+    top: -5px;
 }
 
 footer {
